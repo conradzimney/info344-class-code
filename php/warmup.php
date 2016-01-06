@@ -5,14 +5,14 @@
     echo "Your new random value is {$random}\n";
     
 // Arrays and Loops
-    $months = array();
-    $date = new DateTime('01/01/2000');
-    for ($i = 1; $i <= 12; $i++) {
-        $months[$i] = 
-    }
-    print_r($months);
+
+    $months = array("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December");
     foreach ($months as $m) {
         echo "$m\n";
     }
-    
+    sort($months);
+    echo "Sorting months Alphabetically...\n";
+    foreach ($months as $m) {
+        echo "$m\n";
+    }
 ?>
