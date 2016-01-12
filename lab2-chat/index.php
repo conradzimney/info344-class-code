@@ -8,6 +8,7 @@ $m = $_GET['m'];
 
 $conn = getConnection();
 $chatModel = new Chat($conn);
+$chatModel->insert($name, $m);
 $messages = $chatModel->load();
 
 ?>
@@ -51,7 +52,7 @@ $messages = $chatModel->load();
                 >
         </div>
         <div class="form-group">
-            <button class="btn btn-primary" type="submit" onclick="<?php $chatModel->insert($name, $m)?>">Send Message</button>
+            <button class="btn btn-primary" type="submit">Send Message</button>
         </div>
     </form>
     <br>
