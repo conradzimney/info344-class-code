@@ -8,3 +8,9 @@ node_modules
 # except files ending in `.template` or `.md`
 !**/secret/*.template
 !**/secret/*.md
+
+# ignore .vagrant directory
+.vagrant
+
+# and the VSCode typings directory
+typings
