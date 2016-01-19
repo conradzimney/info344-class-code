@@ -43,11 +43,46 @@ if (count($matches) == 1) {
 <body class="container">
     <?php 
     include 'views/search-form.php';
+    /*
+    <h1>Lookup Weather</h1>
+    <form action="" method="GET">
+        <div class="form-group">
+            <input type="text" 
+                id="qInput" 
+                name="q"
+                class="form-control" 
+                value="<?= htmlentities($q) ?>"
+                placeholder="enter a zip code or city name"
+                required
+                >
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit">Get Weather</button>
+        </div>
+    </form> 
+    */ 
     
     include 'views/matches.php';
+    /*
+    <h1>Possible Matches</h1>
+    <ul>
+        <?php foreach($matches as $match):?>
+        <li>
+            <?= htmlentities($match['primary_city']) ?>,
+            <?= htmlentities($match['state']) ?>
+            <?= htmlentities($match['zip']) ?>
+            <?= htmlentities($match['country']) ?>
+        </li>
+        <?php endforeach; ?>
+    </ul>
+    */
     
     if (isset($weatherData)) {
         include 'views/weather.php';
+        /*
+        <h1>Current Weather</h1>
+        <p><?= htmlentities($weatherData->main->temp) ?>&deg;F</p>
+        */
     }
     ?>
     
