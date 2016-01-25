@@ -1,0 +1,30 @@
+body {
+    font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+header {
+    background-color: #ff6600;
+    padding: 0.5em;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.stories {
+    padding: 0.5em;
+    background-color: #f6f6ef;
+}
+
+.stories li {
+    margin-bottom: 0.5em;
+}
+
+.stories a:hover,
+.stories a:focus {
+    text-decoration: none;
+}

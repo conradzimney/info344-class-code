@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>344 News</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">    
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="icon" href="img/page-icon.png">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.11.1/moment.min.js"></script>
+    <script src="js/index.js"></script>
+
+</head>
+<body class="container" ng-app="news" ng-controller="StoriesController">
+    <header>
+        <h1>Server-Side Web Programming News</h1>
+    </header>
+    
+    <section class="stories">
+        <form name="newStoryForm" ng-submit="saveStory()" novalidate>
+            <div class="form-group">
+                <input type="url"
+                    class="form-control"
+                    ng-model="newStory.url"
+                    placeholder="enter a URL"
+                    required
+                >            
+            </div>
+        </form>
+        
+        <ol>
+            <li ng-repeat="story in stories">
+                <p>
+                    <button type="button" class="btn btn-default btn-xs" ng-click="upVote(story)" title="up-vote story">&#8679;</button>
+                    <a ng-href="{{story.url}}" target="_blank">{{story.title || story.url}}</a>
+                </p>
+                <p>{{getVotes(story)}}, added {{getAge(story)}}</p>
+            </li>
+        </ol>                
+    </section>
+    
+</body>
+</html>
