@@ -3,7 +3,7 @@
 Today's lab will take you to the Promise Land! *chuckles*
 Seriously though, JavaScript promises are super useful when writing
 asynchronous JS code that requires synchronous steps. We will practice promises
-with a few discrete exerecises to help get your brains adjusted to these odd
+with a few programming exercises to help get your brains adjusted to these cool
 new programming constructs!
 
 If you get stuck at any point in this lab (and even if you don't), check out
@@ -21,7 +21,7 @@ the integer, and then chaining another `.then()` statement to log the results
 to the console. In total, you should chain three `.then()` statements in this
 exercise.
 
-## Exercise 2: Promisify XMLHttpRequest
+## Exercise 2: Promisify http.get
 
 Now that we have a better understanding for the promise API, we can move on to
 something a little more interesting. Let's promisify the 'http.get' function!
@@ -49,9 +49,9 @@ function get(url) {
 }
 ```
 
-Make sure as you copy this code to carefully look at what's happnening in the
+Make sure as you copy this code to carefully look at what's happening in the
 promise constructor. Take note of the fact that function that's passed to the
-constructor accepts two values: a resolve function which is called when
+constructor accepts two values: a resolve function which gets called when
 the promise is successful, and a reject function for when it fails.
 
 Now that we have this method, let's use it for something really simple. Let's
