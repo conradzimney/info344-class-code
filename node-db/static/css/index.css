@@ -28,3 +28,8 @@ header h1 {
 .stories a:focus {
     text-decoration: none;
 }
+
+.error-message {
+    color: #ff6600;
+    font-size: 0.8em;
+}
