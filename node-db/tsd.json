@@ -46,6 +46,9 @@
     },
     "mongoose/mongoose.d.ts": {
       "commit": "7fffbd3e040a93c244777e3be04cd6223ac69301"
+    },
+    "htmlparser2/htmlparser2.d.ts": {
+      "commit": "86dbea8fc37d9473fee465da4f0a21bea4f8cbd9"
     }
   }
 }
