@@ -12,11 +12,11 @@ to run all of those setup and installation commands for each instance. It is
 common to see automated setup scripts and workflows in the industry that allow
 us to deploy sites and a massive scale.
 
-The thing to emphasize is that a provisioning script separates the base VM 
+A provisioning script separates the base VM 
 image from the application software you need to put on top of it. This keeps 
-things flexible, as you can migrate to using Ubuntu 16.04 once it’s released,
+things flexible. You can migrate to using Ubuntu 16.04 once it’s released,
 but still run your same provisioning script to configure it (assuming they 
-don’t make any backwards-incompatible changes in 16.04!). If you created a new 
+don't make any backwards-incompatible changes in 16.04!). If you created a new 
 pre-configured image using Packer, you’d have to rebuild that once Ubuntu 16.04
 is released.
  
@@ -83,7 +83,17 @@ If you're inside of the Node interactive shell, then our script probably worked!
 
 ## Part IV: Running Provisioning on a Remote VM
 
-`ssh root@ip-address “bash -s” < provision.sh`
+You can use your provisioning script not only to provision a Vagrant VM, but also your production VM.
+To run it against a new VM, use ssh:
+
+`ssh root@ip-address "bash -s" < provision.sh`
+
+This connects to the server as the `root` account and executes the script.
+If you don't have root access to the VM, but instead access the VM with a non-root
+account that has `sudo` privileges, then use `sudo` when running bash so that
+your script can install new software on the VM:
+
+`ssh root@ip-address "sudo bash -s" < provision.sh`
 
 ## Part V: Industry Solutions (optional)
 
