@@ -1,0 +1,27 @@
+{
+  "name": "node-mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.2.2",
+    "body-parser": "^1.14.2",
+    "express": "^4.13.4",
+    "morgan": "^1.6.1",
+    "mysql": "^2.10.2"
+  },
+  "devDependencies": {
+    "request-promise": "^2.0.0",
+    "should": "^8.2.2",
+    "should-promised": "^0.3.1"
+  }
+}
