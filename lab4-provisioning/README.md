@@ -93,7 +93,7 @@ If you don't have root access to the VM, but instead access the VM with a non-ro
 account that has `sudo` privileges, then use `sudo` when running bash so that
 your script can install new software on the VM:
 
-`ssh root@ip-address "sudo bash -s" < provision.sh`
+`ssh some-sudo-user@ip-address "sudo bash -s" < provision.sh`
 
 ## Part V: Industry Solutions (optional)
 

@@ -22,7 +22,7 @@ var dbConfig = {
 
 var cnPool = bluebird.promisifyAll(mysql.createPool(dbConfig));
 var urlsModel = urls.Model(cnPool, shorten);
-var urlsApiRouter = urlsApi.Router(urlsModel);
+var urlsApiRouter = urlsApi.Router(urlsModel, API_ROOT);
 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
