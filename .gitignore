@@ -1,6 +1,7 @@
 node_modules
 .idea
 .DS_Store
+zip_code_database.csv
 
 #ignore all files in any directory names 'secret' 
 **/secret/*
